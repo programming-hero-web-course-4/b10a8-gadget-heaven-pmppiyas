@@ -16,10 +16,10 @@ export default function Navbar() {
     </>
   );
   return (
-    <div class="navbar bg-base-100">
+    <div class="navbar bg-sec text-white pr-4 lg:px-28">
       <div class="navbar-start">
         <div class="dropdown">
-          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+          <div tabindex="0" role="button" className="btn btn-ghost lg:hidden ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               class="h-5 w-5"
@@ -37,18 +37,30 @@ export default function Navbar() {
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            class="menu menu-sm dropdown-content bg-base-400 rounded-box z-[1] mt-3 w-52 p-2 shadow"
           >
             {links}
           </ul>
         </div>
         <a class="btn btn-ghost text-xl">Gadget Heaven</a>
       </div>
-      <div class="navbar-center hidden lg:flex">
+      <div class="navbar-center hidden lg:flex ">
         <ul class="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div class="navbar-end">
-        <a class="btn">Button</a>
+      <div class="navbar-end flex gap-6 pr-4 md:pr-0">
+        <div className="indicator">
+          <span className="indicator-item badge badge-secondary">99+</span>
+          <button className="p-2">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+
+        <div className="indicator">
+          <span className="indicator-item badge badge-secondary">99+</span>
+          <button className="p-2">
+            <i class="fa-solid fa-heart"></i>
+          </button>
+        </div>
       </div>
     </div>
   );
