@@ -2,7 +2,7 @@
   {
     "product_id": 201,
     "product_title": "MacBook Air",
-    "product_image": "url_to_image_of_macbook_air.jpg",
+    "product_image": "https://i.ibb.co.com/Snk42dn/pexels-morningtrain-18105-1.jpg",
     "category": "Laptop",
     "price": 999,
     "description": "A lightweight and powerful laptop for both work and personal use.",
@@ -18,7 +18,7 @@
   {
     "product_id": 202,
     "product_title": "Dell XPS 13",
-    "product_image": "url_to_image_of_dell_xps_13.jpg",
+    "product_image": "https://i.ibb.co.com/23vdHNk/download.jpg",
     "category": "Laptop",
     "price": 1000,
     "description": "An ultra-thin laptop with impressive display and performance.",
@@ -34,7 +34,7 @@
   {
     "product_id": 203,
     "product_title": "HP Spectre x360",
-    "product_image": "url_to_image_of_hp_spectre_x360.jpg",
+    "product_image": "https://i.ibb.co.com/gDY49Lx/pexels-daan-stevens-66128-939331.jpg",
     "category": "Laptop",
     "price": 875,
     "description": "A versatile laptop with 2-in-1 functionality and stunning design.",
@@ -50,7 +50,7 @@
   {
     "product_id": 204,
     "product_title": "Lenovo ThinkPad X1 Carbon",
-    "product_image": "url_to_image_of_lenovo_thinkpad_x1.jpg",
+    "product_image": "https://i.ibb.co.com/23vdHNk/download.jpg",
     "category": "Laptop",
     "price": 980,
     "description": "A powerful and durable laptop designed for business professionals.",
@@ -66,7 +66,7 @@
   {
     "product_id": 205,
     "product_title": "Asus ZenBook 14",
-    "product_image": "url_to_image_of_asus_zenbook_14.jpg",
+    "product_image": "https://i.ibb.co.com/LdrBdrq/pexels-life-of-pix-7974.jpg",
     "category": "Laptop",
     "price": 780,
     "description": "A sleek and lightweight laptop with great battery life.",
@@ -82,7 +82,7 @@
   {
     "product_id": 206,
     "product_title": "Acer Swift 3",
-    "product_image": "url_to_image_of_acer_swift_3.jpg",
+    "product_image": "https://i.ibb.co.com/PC3qNv9/pexels-veeterzy-303383.jpg",
     "category": "Laptop",
     "price": 975,
     "description": "An affordable, lightweight laptop for everyday tasks.",
@@ -98,7 +98,7 @@
   {
     "product_id": 301,
     "product_title": "iPhone 13",
-    "product_image": "url_to_image_of_iphone_13.jpg",
+    "product_image": "https://i.ibb.co.com/ZmShPVm/images-1.jpg",
     "category": "Phone",
     "price": 560,
     "description": "The latest iPhone model with powerful performance and an advanced dual-camera system.",
@@ -114,7 +114,7 @@
   {
     "product_id": 302,
     "product_title": "Samsung Galaxy S21",
-    "product_image": "url_to_image_of_galaxy_s21.jpg",
+    "product_image": "https://i.ibb.co.com/t8Lg4mZ/images-2.jpg",
     "category": "Phone",
     "price": 650,
     "description": "High-performance smartphone with stunning display and camera quality.",
@@ -130,7 +130,7 @@
   {
     "product_id": 303,
     "product_title": "Google Pixel 6",
-    "product_image": "url_to_image_of_google_pixel_6.jpg",
+    "product_image": "https://i.ibb.co.com/fXNjHhp/images-3.jpg",
     "category": "Phone",
     "price": 560,
     "description": "A powerful smartphone with Google's latest AI technology.",
@@ -146,7 +146,7 @@
   {
     "product_id": 304,
     "product_title": "OnePlus 9",
-    "product_image": "url_to_image_of_oneplus_9.jpg",
+    "product_image": "https://i.ibb.co.com/g6nvfmg/oneplus-9-pro-hoyle-promo-27.webp",
     "category": "Phone",
     "price": 650,
     "description": "A fast and smooth smartphone with great camera and display.",
@@ -162,7 +162,7 @@
   {
     "product_id": 401,
     "product_title": "Apple Watch Series 7",
-    "product_image": "url_to_image_of_apple_watch_series_7.jpg",
+    "product_image": "https://i.ibb.co.com/9v3b7Ws/download-1.jpg",
     "category": "Smart Watch",
     "price": 499,
     "description": "A smartwatch that tracks health, fitness, and keeps you connected.",
@@ -178,7 +178,7 @@
   {
     "product_id": 402,
     "product_title": "Samsung Galaxy Watch 4",
-    "product_image": "url_to_image_of_galaxy_watch_4.jpg",
+    "product_image": "https://i.ibb.co.com/k2p5BqN/images-4.jpg",
     "category": "Smart Watch",
     "price": 769,
     "description": "A stylish smartwatch with advanced health tracking and seamless Android integration.",
@@ -194,7 +194,7 @@
   {
     "product_id": 403,
     "product_title": "Fitbit Versa 3",
-    "product_image": "url_to_image_of_fitbit_versa_3.jpg",
+    "product_image": "https://i.ibb.co.com/Rcqxh0b/download-2.jpg",
     "category": "Smart Watch",
     "price": 560,
     "description": "A reliable smartwatch with fitness tracking and a sleek design.",

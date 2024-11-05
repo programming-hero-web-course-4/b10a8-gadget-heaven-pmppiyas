@@ -2,15 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function SIngleGadget({ gadget }) {
-  const { product_title, price, product_id: id } = gadget;
+  const { product_title, price, product_id: id, product_image } = gadget;
 
   return (
-    <div className="card card-compact bg-base-100 shadow-xl">
+    <div className="card card-compact bg-base-100 shadow-xl hover:scale-100 scale-95 transition-transform hover:bg-purple-200">
       <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
+        <img className="h-[200px] w-full" src={product_image} alt="Shoes" />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product_title}</h2>

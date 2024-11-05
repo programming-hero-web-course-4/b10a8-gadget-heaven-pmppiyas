@@ -21,7 +21,6 @@ export default function GadgetDetails() {
   }
 
   const {
-    product_id,
     product_title,
     product_image,
     price,
@@ -37,11 +36,15 @@ export default function GadgetDetails() {
         <h2>{title}</h2>
         <p>{subtitle}</p>
       </div> */}
-      <div className="bg-gray-100 py-8 grid md:grid-cols-5 gap-8 md:w-5/6 mx-auto pl-4">
-        <div className="col-span-2 bg-slate-400">
-          <img src={product_image}></img>
+      <div className="bg-gray-200 py-8 md:grid md:grid-cols-5 gap-8 md:w-5/6 mx-auto rounded-xl">
+        <div className=" md:col-span-2  m-2">
+          <img
+            className="w-full h-full object-fit rounded-xl"
+            src={product_image}
+            alt={product_title}
+          ></img>
         </div>
-        <div className="space-y-2 col-span-3 ">
+        <div className="space-y-2 col-span-3 m-2">
           <h2 className="text-2xl font-medium">{product_title}</h2>
           <p>Price: ${price}</p>
           <div
@@ -69,6 +72,17 @@ export default function GadgetDetails() {
               <i class="fa-regular fa-star"></i>
             </p>
             <span className="bg-gray-300 px-2 rounded-full">{rating}</span>
+          </div>
+          <div className="flex gap-6 ">
+            <button className="btn bg-sec ">
+              Add to Card
+              <span>
+                <i class="fa-solid fa-cart-shopping"></i>
+              </span>
+            </button>
+            <button className="text-sec text-3xl bg-gray-400 px-2 rounded-full btn">
+              <i class="fa-regular fa-heart"></i>
+            </button>
           </div>
         </div>
       </div>
