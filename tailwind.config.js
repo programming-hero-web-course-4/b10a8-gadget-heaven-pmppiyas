@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        sec: 'rgb(149, 56, 226)',
+        sec: '#9538E2',
       },
     },
   },

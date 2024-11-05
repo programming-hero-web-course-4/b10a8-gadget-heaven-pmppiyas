@@ -4,7 +4,7 @@
     "product_title": "MacBook Air",
     "product_image": "url_to_image_of_macbook_air.jpg",
     "category": "Laptop",
-    "price": "$999-$1299",
+    "price": 999,
     "description": "A lightweight and powerful laptop for both work and personal use.",
     "specifications": [
       "13.3-inch Retina display",
@@ -20,7 +20,7 @@
     "product_title": "Dell XPS 13",
     "product_image": "url_to_image_of_dell_xps_13.jpg",
     "category": "Laptop",
-    "price": "$899-$1599",
+    "price": 1000,
     "description": "An ultra-thin laptop with impressive display and performance.",
     "specifications": [
       "13.4-inch FHD+ display",
@@ -36,7 +36,7 @@
     "product_title": "HP Spectre x360",
     "product_image": "url_to_image_of_hp_spectre_x360.jpg",
     "category": "Laptop",
-    "price": "$1199-$1599",
+    "price": 875,
     "description": "A versatile laptop with 2-in-1 functionality and stunning design.",
     "specifications": [
       "13.3-inch FHD display",
@@ -52,7 +52,7 @@
     "product_title": "Lenovo ThinkPad X1 Carbon",
     "product_image": "url_to_image_of_lenovo_thinkpad_x1.jpg",
     "category": "Laptop",
-    "price": "$1299-$1999",
+    "price": 980,
     "description": "A powerful and durable laptop designed for business professionals.",
     "specifications": [
       "14-inch UHD display",
@@ -68,7 +68,7 @@
     "product_title": "Asus ZenBook 14",
     "product_image": "url_to_image_of_asus_zenbook_14.jpg",
     "category": "Laptop",
-    "price": "$899-$1399",
+    "price": 780,
     "description": "A sleek and lightweight laptop with great battery life.",
     "specifications": [
       "14-inch FHD display",
@@ -84,7 +84,7 @@
     "product_title": "Acer Swift 3",
     "product_image": "url_to_image_of_acer_swift_3.jpg",
     "category": "Laptop",
-    "price": "$699-$899",
+    "price": 975,
     "description": "An affordable, lightweight laptop for everyday tasks.",
     "specifications": [
       "14-inch FHD display",
@@ -100,7 +100,7 @@
     "product_title": "iPhone 13",
     "product_image": "url_to_image_of_iphone_13.jpg",
     "category": "Phone",
-    "price": "$799-$1099",
+    "price": 560,
     "description": "The latest iPhone model with powerful performance and an advanced dual-camera system.",
     "specifications": [
       "6.1-inch Super Retina XDR display",
@@ -116,7 +116,7 @@
     "product_title": "Samsung Galaxy S21",
     "product_image": "url_to_image_of_galaxy_s21.jpg",
     "category": "Phone",
-    "price": "$699-$999",
+    "price": 650,
     "description": "High-performance smartphone with stunning display and camera quality.",
     "specifications": [
       "6.2-inch Dynamic AMOLED 2X",
@@ -132,7 +132,7 @@
     "product_title": "Google Pixel 6",
     "product_image": "url_to_image_of_google_pixel_6.jpg",
     "category": "Phone",
-    "price": "$599-$899",
+    "price": 560,
     "description": "A powerful smartphone with Google's latest AI technology.",
     "specifications": [
       "6.4-inch AMOLED display",
@@ -148,7 +148,7 @@
     "product_title": "OnePlus 9",
     "product_image": "url_to_image_of_oneplus_9.jpg",
     "category": "Phone",
-    "price": "$729-$929",
+    "price": 650,
     "description": "A fast and smooth smartphone with great camera and display.",
     "specifications": [
       "6.55-inch Fluid AMOLED display",
@@ -164,7 +164,7 @@
     "product_title": "Apple Watch Series 7",
     "product_image": "url_to_image_of_apple_watch_series_7.jpg",
     "category": "Smart Watch",
-    "price": "$399-$749",
+    "price": 499,
     "description": "A smartwatch that tracks health, fitness, and keeps you connected.",
     "specifications": [
       "45mm display",
@@ -180,7 +180,7 @@
     "product_title": "Samsung Galaxy Watch 4",
     "product_image": "url_to_image_of_galaxy_watch_4.jpg",
     "category": "Smart Watch",
-    "price": "$249-$349",
+    "price": 769,
     "description": "A stylish smartwatch with advanced health tracking and seamless Android integration.",
     "specifications": [
       "1.4-inch AMOLED display",
@@ -196,7 +196,7 @@
     "product_title": "Fitbit Versa 3",
     "product_image": "url_to_image_of_fitbit_versa_3.jpg",
     "category": "Smart Watch",
-    "price": "$229-$249",
+    "price": 560,
     "description": "A reliable smartwatch with fitness tracking and a sleek design.",
     "specifications": [
       "1.58-inch AMOLED display",
