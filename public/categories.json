@@ -1,6 +1,7 @@
 [
-  { "id": 1, "name": "Laptop" },
-  { "id": 2, "name": "Phone" },
-  { "id": 3, "name": "Smart Watch" },
-  { "id": 4, "name": "Tablet" }
+  { "id": 1, "name": "All Gadgets" },
+  { "id": 2, "name": "Laptop" },
+  { "id": 3, "name": "Phone" },
+  { "id": 4, "name": "Smart Watch" },
+  { "id": 5, "name": "Tablet" }
 ]
