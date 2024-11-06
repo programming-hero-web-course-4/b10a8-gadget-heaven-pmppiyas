@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import { addCart, getAllCart } from '../Utilities/addCart';
+import {
+  addWishlist,
+  getAllWishlist,
+  removeWishlist,
+} from '../Utilities/addWish';
 
 export default function GadgetDetails() {
   const allGadgets = useLoaderData();
@@ -8,6 +13,7 @@ export default function GadgetDetails() {
   const IdNumber = parseInt(id);
   const [gadget, setGadget] = useState(null);
   const [isAdd, setIsAdd] = useState(false);
+  const [isInWishlist, setIsInWishlist] = useState(false);
 
   useEffect(() => {
     if (allGadgets) {
@@ -20,11 +26,18 @@ export default function GadgetDetails() {
 
   useEffect(() => {
     if (gadget) {
-      const additems = getAllCart();
-      const isExist = additems.some(
+      const cartItems = getAllCart();
+      const wishlistItems = getAllWishlist();
+
+      const isCartItem = cartItems.some(
         item => item.product_id === gadget.product_id
       );
-      setIsAdd(isExist);
+      const isWishlistItem = wishlistItems.some(
+        item => item.product_id === gadget.product_id
+      );
+
+      setIsAdd(isCartItem);
+      setIsInWishlist(isWishlistItem);
     }
   }, [gadget]);
 
@@ -52,15 +65,26 @@ export default function GadgetDetails() {
     setIsAdd(true);
   };
 
+  // Handle Wishlist
+  const handleWishlist = gadget => {
+    if (isInWishlist) {
+      removeWishlist(gadget.product_id);
+      setIsInWishlist(false);
+    } else {
+      addWishlist(gadget);
+      setIsInWishlist(true);
+    }
+  };
+
   return (
     <div>
       <div className="bg-gray-200 py-8 md:grid md:grid-cols-5 gap-8 md:w-5/6 mx-auto rounded-xl">
-        <div className=" md:col-span-2 m-2">
+        <div className="md:col-span-2 m-2">
           <img
             className="w-full h-full object-fit rounded-xl"
             src={product_image}
             alt={product_title}
-          ></img>
+          />
         </div>
         <div className="space-y-2 col-span-3 m-2">
           <h2 className="text-2xl font-medium">{product_title}</h2>
@@ -102,8 +126,17 @@ export default function GadgetDetails() {
                 <i className="fa-solid fa-cart-shopping"></i>
               </span>
             </button>
-            <button className="text-sec text-3xl bg-gray-400 px-2 rounded-full btn">
-              <i className="fa-regular fa-heart"></i>
+            <button
+              onClick={() => handleWishlist(gadget)}
+              className={`text-sec text-3xl bg-gray-400 px-2 rounded-full btn ${
+                isInWishlist ? 'text-red-500' : 'text-gray-500'
+              }`}
+            >
+              <i
+                className={
+                  isInWishlist ? 'fa-solid fa-heart' : 'fa-regular fa-heart'
+                }
+              ></i>
             </button>
           </div>
         </div>
