@@ -1,23 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { addCart, getAllCart } from '../Utilities/addCart';
 
 export default function GadgetDetails() {
   const allGadgets = useLoaderData();
   const { id } = useParams();
   const IdNumber = parseInt(id);
   const [gadget, setGadget] = useState(null);
+  const [isAdd, setIsAdd] = useState(false);
 
   useEffect(() => {
-    const selectGadget = allGadgets.find(
-      gadget => gadget.product_id === IdNumber
-    );
-    if (selectGadget) {
-      setGadget(selectGadget);
+    if (allGadgets) {
+      const selectedGadget = allGadgets.find(
+        gadget => gadget.product_id === IdNumber
+      );
+      setGadget(selectedGadget);
     }
   }, [allGadgets, IdNumber]);
 
+  useEffect(() => {
+    if (gadget) {
+      const additems = getAllCart();
+      const isExist = additems.some(
+        item => item.product_id === gadget.product_id
+      );
+      setIsAdd(isExist);
+    }
+  }, [gadget]);
+
   if (!gadget) {
-    return <div>Loading gadget details...</div>;
+    return (
+      <div className="text-2xl font-medium text-center h-full mt-52">
+        Loading gadget details...
+      </div>
+    );
   }
 
   const {
@@ -30,14 +46,16 @@ export default function GadgetDetails() {
     rating,
   } = gadget;
 
+  // Handle Add to Cart
+  const handleCart = gadget => {
+    addCart(gadget);
+    setIsAdd(true);
+  };
+
   return (
     <div>
-      {/* <div className="bg-sec">
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
-      </div> */}
       <div className="bg-gray-200 py-8 md:grid md:grid-cols-5 gap-8 md:w-5/6 mx-auto rounded-xl">
-        <div className=" md:col-span-2  m-2">
+        <div className=" md:col-span-2 m-2">
           <img
             className="w-full h-full object-fit rounded-xl"
             src={product_image}
@@ -57,7 +75,7 @@ export default function GadgetDetails() {
             {availability ? 'In Stock' : 'Not Available'}
           </div>
           <p>{description}</p>
-          <p className="font-medium"> Specification:</p>
+          <p className="font-medium">Specifications:</p>
           <ul className="list-decimal list-inside pl-2">
             {specifications.map((spec, index) => (
               <li key={index}>{spec}</li>
@@ -65,23 +83,27 @@ export default function GadgetDetails() {
           </ul>
           <div className="flex gap-2">
             <p>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-solid fa-star text-yellow-400"></i>
-              <i class="fa-regular fa-star"></i>
+              <i className="fa-solid fa-star text-yellow-400"></i>
+              <i className="fa-solid fa-star text-yellow-400"></i>
+              <i className="fa-solid fa-star text-yellow-400"></i>
+              <i className="fa-solid fa-star text-yellow-400"></i>
+              <i className="fa-regular fa-star"></i>
             </p>
             <span className="bg-gray-300 px-2 rounded-full">{rating}</span>
           </div>
-          <div className="flex gap-6 ">
-            <button className="btn bg-sec ">
-              Add to Card
+          <div className="flex gap-6">
+            <button
+              disabled={isAdd}
+              onClick={() => handleCart(gadget)}
+              className="btn bg-sec"
+            >
+              Add to Cart
               <span>
-                <i class="fa-solid fa-cart-shopping"></i>
+                <i className="fa-solid fa-cart-shopping"></i>
               </span>
             </button>
             <button className="text-sec text-3xl bg-gray-400 px-2 rounded-full btn">
-              <i class="fa-regular fa-heart"></i>
+              <i className="fa-regular fa-heart"></i>
             </button>
           </div>
         </div>

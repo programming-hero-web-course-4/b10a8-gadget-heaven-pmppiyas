@@ -6,11 +6,13 @@ import Statistics from '../Components/Statistics';
 import Home from '../Components/Home';
 import GadgetCart from '../Components/GadgetCart';
 import GadgetDetails from '../Components/GadgetDetails';
+import ErrorElement from '../Components/ErrorElement';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <MainLayout />,
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       {
         path: '/',
