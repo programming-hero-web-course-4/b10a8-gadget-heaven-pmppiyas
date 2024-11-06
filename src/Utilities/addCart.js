@@ -30,7 +30,6 @@ const removeCart = productId => {
   let addItem = getAllCart();
   addItem = addItem.filter(item => item.product_id !== productId); // Remove the item
   localStorage.setItem('AddItem', JSON.stringify(addItem));
-  toast.success('Item removed from cart!', { duration: 2000 });
 };
 
 export { addCart, getAllCart, removeCart };

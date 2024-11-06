@@ -10,7 +10,7 @@ export default function Home() {
       <Banner></Banner>
       {/* Category And Items */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 md:space-x-6 lg:space-x-12 mt-6">
-        <div className="col-span-2">
+        <div className="col-span-2 mt-4 md:mt-8">
           <Categories categories={categories}></Categories>
         </div>
         <div className="col-span-6">
