@@ -25,10 +25,10 @@ const addCart = gadget => {
   });
 };
 
-// Remove gadget from localStorage by product_id
+// Remove gadget from localStorage
 const removeCart = productId => {
   let addItem = getAllCart();
-  addItem = addItem.filter(item => item.product_id !== productId); // Remove the item
+  addItem = addItem.filter(item => item.product_id !== productId);
   localStorage.setItem('AddItem', JSON.stringify(addItem));
 };
 

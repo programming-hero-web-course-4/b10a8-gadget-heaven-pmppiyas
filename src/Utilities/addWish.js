@@ -1,4 +1,3 @@
-// wishlist.js
 import toast from 'react-hot-toast';
 
 // Get All Gadgets from LocalStorage for Wishlist

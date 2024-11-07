@@ -6,6 +6,7 @@ import {
   getAllWishlist,
   removeWishlist,
 } from '../Utilities/addWish';
+import Navbar from './Navbar';
 
 export default function GadgetDetails() {
   const allGadgets = useLoaderData();
@@ -77,7 +78,8 @@ export default function GadgetDetails() {
   };
 
   return (
-    <div className="relative flex container mx-auto justify-center">
+    <div className="relative flex flex-col container mx-auto items-center">
+      <Navbar></Navbar>
       {/* Content */}
       <div className="bg-sec pb-52 text-center px-2 -z-50 text-gray-100 w-full">
         <h1 className="text-3xl font-medium">Product Details</h1>
