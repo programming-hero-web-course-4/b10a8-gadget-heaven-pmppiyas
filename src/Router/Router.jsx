@@ -7,7 +7,7 @@ import Home from '../Components/Home';
 import GadgetCart from '../Components/GadgetCart';
 import GadgetDetails from '../Components/GadgetDetails';
 import ErrorElement from '../Components/ErrorElement';
-
+import Blogs from '../Components/Blogs';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -47,6 +47,11 @@ const router = createBrowserRouter([
       {
         path: '/category/:category/gadget/:id',
         element: <GadgetDetails />,
+        loader: () => fetch('/gadgets.json'),
+      },
+      {
+        path: '/blogs',
+        element: <Blogs></Blogs>,
         loader: () => fetch('/gadgets.json'),
       },
     ],

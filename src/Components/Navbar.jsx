@@ -37,6 +37,9 @@ export default function Navbar({
       <li>
         <NavLink to="/dashboard">Dashboard</NavLink>
       </li>
+      <li>
+        <NavLink to="/blogs">Blogs</NavLink>
+      </li>
     </div>
   );
 
@@ -49,7 +52,7 @@ export default function Navbar({
           </div>
           <ul
             tabIndex="0"
-            className="menu menu-sm dropdown-content bg-sec rounded-box z-[1] mt-3 w-52 p-2 shadow "
+            className="menu menu-sm dropdown-content bg-sec rounded-box z-[100] mt-3 w-52 p-2 shadow "
           >
             {links}
           </ul>
@@ -66,6 +69,9 @@ export default function Navbar({
           </li>
           <li>
             <NavLink to="/dashboard">Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blogs">Blogs</NavLink>
           </li>
         </ul>
       </div>
