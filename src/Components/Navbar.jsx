@@ -85,7 +85,7 @@ export default function Navbar({
           </button>
           <ul
             tabIndex="0"
-            className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-64"
+            className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-64 z-50"
           >
             {cartItems.length > 0 ? (
               cartItems.map((item, index) => (
@@ -112,7 +112,7 @@ export default function Navbar({
           </button>
           <ul
             tabIndex="0"
-            className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-64"
+            className="dropdown-content menu p-2 shadow bg-white text-black rounded-box w-64 z-50"
           >
             {wishlistItems.length > 0 ? (
               wishlistItems.map((item, index) => (

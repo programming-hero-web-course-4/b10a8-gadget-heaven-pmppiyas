@@ -38,9 +38,7 @@ export default function Dashboard() {
       if (addGadget.length > 0) {
         addGadget.forEach(gadget => removeCart(gadget.product_id));
         setAddGadget([]);
-        toast.success('Successfully Purchase!', {
-          duration: 2000,
-        });
+        document.getElementById('success_modal').showModal();
       } else {
         toast.error('No items for Purchase!', {
           duration: 2000,
@@ -56,6 +54,19 @@ export default function Dashboard() {
 
   return (
     <div className="container mx-auto">
+      {/* Modal for successful purchase */}
+      <dialog id="success_modal" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Purchase Successful!</h3>
+          <p className="py-4">
+            Your purchase has been completed. Thank you for shopping with us!
+          </p>
+          <form method="dialog" className="modal-action">
+            <button className="btn">Close</button>
+          </form>
+        </div>
+      </dialog>
+
       <Navbar bgColor="white" textColor="black"></Navbar>
       <div className="bg-sec flex flex-col justify-center items-center gap-2 text-white text-center py-6">
         <h2 className="text-3xl font-medium">This is Dashboard</h2>
@@ -83,19 +94,19 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className="flex justify-between items-center  h-16">
+      <div className="flex justify-between items-center h-16">
         <p className="text-2xl font-medium pl-2">
           {selectedTab === 'cart' ? 'Cart' : 'Wishlist'}
         </p>
         {selectedTab === 'cart' && (
-          <div className=" px-4 flex justify-center items-center gap-10 md:gap-20">
+          <div className="px-4 flex justify-center items-center gap-10 md:gap-20">
             <p className="text-lg font-medium">Total Price: ${totalPrice}</p>
             <div className="flex gap-4">
               <button
                 onClick={handleSortDescending}
                 className="btn border-sec border-2 bg-transparent text-sec rounded-md"
               >
-                Sort by Price
+                Sort by Price <i class="fa-solid fa-arrow-down-9-1"></i>
               </button>
               <button
                 onClick={handlePurchase}
@@ -138,16 +149,10 @@ export default function Dashboard() {
           ))
         ) : (
           <div className="min-h-[400px] flex justify-center items-center">
-            <p>
-              {selectedTab === 'cart' ? (
-                <div className=" min-h-[400px] flex justify-center items-center">
-                  <p className="text-3xl">Your Cartlist is Empty</p>
-                </div>
-              ) : (
-                <div className=" min-h-[400px] flex justify-center items-center">
-                  <p className="text-3xl">Your Wishlist is Empty</p>
-                </div>
-              )}
+            <p className="text-3xl">
+              {selectedTab === 'cart'
+                ? 'Your Cartlist is Empty'
+                : 'Your Wishlist is Empty'}
             </p>
           </div>
         )}
