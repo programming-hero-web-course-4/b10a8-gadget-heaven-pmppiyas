@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export default function Categories({ categories }) {
   return (
-    <div className="flex flex-col  gap-2">
+    <div className="flex flex-col  gap-2 py-2 mt-36 md:mt-64">
       {categories.map(gadgetCategory => (
         <NavLink
           key={gadgetCategory.id}

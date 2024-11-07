@@ -77,8 +77,17 @@ export default function GadgetDetails() {
   };
 
   return (
-    <div>
-      <div className="bg-gray-200 py-8 md:grid md:grid-cols-5 gap-8 md:w-5/6 mx-auto rounded-xl">
+    <div className="relative flex container mx-auto justify-center">
+      {/* Content */}
+      <div className="bg-sec pb-52 text-center px-2 -z-50 text-gray-100 w-full">
+        <h1 className="text-3xl font-medium">Product Details</h1>
+        <p className="text-gray-100">
+          Explore the latest gadgets that will take your experience to the next
+          level. From smart devices to the coolest accessories, we have it all!
+        </p>
+      </div>
+      {/* Product Details */}
+      <div className="bg-gray-200 py-8 md:grid md:grid-cols-5 gap-8 md:w-5/6  rounded-xl z-50 absolute top-24">
         <div className="md:col-span-2 m-2">
           <img
             className="w-full h-full object-fit rounded-xl"

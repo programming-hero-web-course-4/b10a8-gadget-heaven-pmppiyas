@@ -3,6 +3,7 @@ import { getAllCart, removeCart } from '../Utilities/addCart';
 import { getAllWishlist, removeWishlist } from '../Utilities/addWish';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Navbar from './Navbar';
 
 export default function Dashboard() {
   const [addGadget, setAddGadget] = useState([]);
@@ -34,11 +35,17 @@ export default function Dashboard() {
 
   const handlePurchase = () => {
     if (selectedTab === 'cart') {
-      addGadget.forEach(gadget => removeCart(gadget.product_id));
-      setAddGadget([]);
-      toast.success('Successfully Purchase!', {
-        duration: 2000,
-      });
+      if (addGadget.length > 0) {
+        addGadget.forEach(gadget => removeCart(gadget.product_id));
+        setAddGadget([]);
+        toast.success('Successfully Purchase!', {
+          duration: 2000,
+        });
+      } else {
+        toast.error('No items for Purchase!', {
+          duration: 2000,
+        });
+      }
     }
   };
 
@@ -49,6 +56,7 @@ export default function Dashboard() {
 
   return (
     <div className="container mx-auto">
+      <Navbar bgColor="white" textColor="black"></Navbar>
       <div className="bg-sec flex flex-col justify-center items-center gap-2 text-white text-center py-6">
         <h2 className="text-3xl font-medium">This is Dashboard</h2>
         <p className="text-sm">
@@ -75,7 +83,6 @@ export default function Dashboard() {
         </div>
       </div>
 
-      {/* Display total price and sort button only for Cart tab */}
       <div className="flex justify-between items-center  h-16">
         <p className="text-2xl font-medium">
           {selectedTab === 'cart' ? 'Cart' : 'Wishlist'}
@@ -91,7 +98,7 @@ export default function Dashboard() {
                 Sort by Price
               </button>
               <button
-                onClick={handlePurchase} // Trigger the purchase (clear cart and show toast)
+                onClick={handlePurchase}
                 className="btn bg-sec text-white"
               >
                 Purchase

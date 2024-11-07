@@ -7,7 +7,6 @@ export default function MainLayout() {
   return (
     <div>
       <Toaster></Toaster>
-      <Navbar></Navbar>
       <div className="min-h-screen">
         <Outlet></Outlet>
       </div>

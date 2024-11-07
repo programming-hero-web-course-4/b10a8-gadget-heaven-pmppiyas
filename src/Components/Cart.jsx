@@ -7,7 +7,11 @@ export default function SIngleGadget({ gadget }) {
   return (
     <div className="card card-compact bg-base-100 shadow-xl hover:scale-100 scale-95 transition-transform hover:bg-purple-200">
       <figure>
-        <img className="h-[200px] w-full" src={product_image} alt="Shoes" />
+        <img
+          className="h-[300px] md:h-[200px] w-full"
+          src={product_image}
+          alt="Shoes"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{product_title}</h2>

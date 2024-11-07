@@ -13,7 +13,7 @@ export default function Home() {
         <div className="col-span-2 mt-4 md:mt-8">
           <Categories categories={categories}></Categories>
         </div>
-        <div className="col-span-6">
+        <div className="col-span-6 ">
           <Outlet></Outlet>
         </div>
       </div>

@@ -21,7 +21,7 @@ export default function GadgetCart() {
   }, [category, allGadgets]);
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-4 md:mt-64">
       <h2 className="col-span-full text-2xl text-center mt-4 md:mt-0 font-medium border-b-2 pb-1 border-purple-700">
         {category ? `${category}` : 'All Gadgets'}
       </h2>
@@ -29,7 +29,7 @@ export default function GadgetCart() {
         gadgets.map(gadget => <Cart key={gadget.product_id} gadget={gadget} />)
       ) : (
         <p className="text-xl text-gray-500 text-center col-span-full min-h-[200px] pt-20">
-          <span className="font-medium">'{category}'</span> is not Avaiable...
+          <span className="font-medium">No Data Found For '{category}'</span>
         </p>
       )}
     </div>
