@@ -12,6 +12,7 @@ export default function Dashboard() {
 
   // Load items based on selected tab
   useEffect(() => {
+    document.title = 'Dashboard | Gedget Heaven';
     const loadItems = selectedTab === 'cart' ? getAllCart() : getAllWishlist();
     setAddGadget(loadItems);
   }, [selectedTab]);

@@ -1,3 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.headline-container {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Adjust as needed */
+  background-color: #f8f9fa; /* Optional background */
+  padding: 10px; /* Optional padding */
+  border-bottom: 2px solid #007bff; /* Optional border */
+}
+
+.scrolling-text {
+  display: inline-block;
+  animation: marquee 10s linear infinite;
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: #333; /* Adjust color as needed */
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

@@ -3,11 +3,16 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import Cart from './Cart';
 
 export default function GadgetCart() {
-  const allGadgets = useLoaderData();
+  const allGadgets = useLoaderData([]);
   const { category } = useParams();
+
   const [gadgets, setGadgets] = useState(allGadgets);
 
   useEffect(() => {
+    const filterByCategory = allGadgets.filter(
+      gadget => gadget.category === category
+    );
+    setGadgets(filterByCategory);
     if (category == 'All Gadgets') {
       setGadgets(allGadgets);
     } else if (category) {

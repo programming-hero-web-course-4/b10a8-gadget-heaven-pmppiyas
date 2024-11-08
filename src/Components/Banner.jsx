@@ -1,7 +1,7 @@
 import React from 'react';
 import bannerImg from '../assets/banner.jpg';
 import Navbar from './Navbar';
-
+import { NavLink } from 'react-router-dom';
 export default function Banner() {
   return (
     <div className="relative bg-sec  text-center container mx-auto flex flex-col justify-center items-center">
@@ -14,7 +14,9 @@ export default function Banner() {
           Explore the latest gadgets that will elevate your experience. From
           smart devices to the coolest accessories, we have it all!
         </p>
-        <button className="btn btn-primary rounded-3xl">Subscribe</button>
+        <button className="btn text-lg text-gray-600 rounded-3xl">
+          <NavLink to={'/'}>Shop Now</NavLink>
+        </button>
       </div>
       <div className="absolute  w-5/6 top-64  mt-12 md:mt-20 outline outline-offset-4 outline-white rounded-2xl z-10">
         <img
