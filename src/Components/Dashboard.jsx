@@ -96,13 +96,15 @@ export default function Dashboard() {
       </div>
 
       <div className="flex justify-between items-center h-16">
-        <p className="text-2xl font-medium pl-2">
+        <p className="hidden md:flex text-2xl font-medium pl-2">
           {selectedTab === 'cart' ? 'Cart' : 'Wishlist'}
         </p>
         {selectedTab === 'cart' && (
-          <div className="px-4 flex justify-center items-center gap-10 md:gap-20">
-            <p className="text-lg font-medium">Total Price: ${totalPrice}</p>
-            <div className="flex gap-4">
+          <div className="px-4 flex justify-end items-center gap-10 md:gap-20 w-full ">
+            <p className="hidden md:flex text-lg font-medium">
+              Total Price: ${totalPrice}
+            </p>
+            <div className="flex justify-between w-full md:w-60 mr-0">
               <button
                 onClick={handleSortDescending}
                 className="btn border-sec border-2 bg-transparent text-sec rounded-md"
